@@ -80,8 +80,16 @@ Before you begin, make sure you have:
 
 ### 1. Implement Backend API Integration
 
-In `backend/server.js`, find the TODO comments in the `/api/chat` endpoint. You need to:
+First, install the Gemini API package in the backend directory:
+```bash
+cd backend
+npm install @google/generative-ai
+```
+
+Then, in `backend/server.js`, find the TODO comments in the `/api/chat` endpoint. You need to:
+- Import the GoogleGenerativeAI SDK
 - Extract the Gemini API key from environment variables
+- Initialize the Gemini client and get a model instance (recommended: 'gemini-2.5-flash')
 - Make an API call to Google's Gemini API
 - Return the chatbot's response to the frontend
 
